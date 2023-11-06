@@ -86,7 +86,7 @@
           var target = $(this.hash);
           $('html, body').stop().animate({
               scrollTop: (target.offset().top) + 1
-          }, 200, 'swing', function () {
+          }, 'swing', function () {
               window.location.hash = target;
               $(document).on("scroll", onScroll);
           });
