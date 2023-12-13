@@ -144,7 +144,9 @@
                   </div>
                   <div class="right-text">
                     <h4>Fácil Usabilidade</h4>
-                    <p>Com uma interface intuitiva e design amigável, nossa plataforma oferece uma experiência de usuário sem complicações. Desfrute da simplicidade enquanto gerencia suas entregas de forma eficiente, garantindo que a usabilidade seja sempre uma prioridade para você.</p>
+                    <p>Com uma interface intuitiva e design amigável, nossa plataforma oferece uma experiência de
+                      usuário sem complicações. Desfrute da simplicidade enquanto gerencia suas entregas de forma
+                      eficiente, garantindo que a usabilidade seja sempre uma prioridade para você.</p>
                   </div>
                 </div>
               </div>
@@ -353,56 +355,69 @@
             style="background-color: #0064fa; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
             <i class="fab fa-instagram" style="margin-right: 10px;"></i> Nosso Instagram
           </a>
-            <br>
-           <br>  
-<br> 
-        <a href="#" target="_blank"
+          <br>
+          <br>
+          <br>
+          <a href="#" onclick="openTermo()" target="_blank"
             style="background-color: #0064fa; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
             <i class="fab fa-document" style="margin-right: 10px;"></i> Termos de Uso
           </a>
           <footer>
-<br>
-           <br>
-           
-   <a href="#" target="_blank"
-            style="background-color: #0064fa; color: #ffffff; padding: 10px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-            <i class="fab fa-document" style="margin-right: 10px;"></i> Política de Privacidade
-          </a>
-          <footer>
-
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
-                  <p>© Copyright 2023 Data Explorers.
-
-                  </p>
-
+            <br>
+            <br>
+            <a href="#" onclick="openPolitica()" target="_blank"
+              style="background-color: #0064fa; color: #ffffff; padding: 10px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+              <i class="fab fa-document" style="margin-right: 10px;"></i> Política de Privacidade
+            </a>
+            <footer>
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
+                    <p>© <span id="currentYear"></span> Desenvolvido por Data Explorers. Todos os direitos reservados.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </footer>
-          <!-- Scripts -->
-          <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-          <script>
-            var formElement = document.getElementById("form");
-            var buttonElement = document.getElementById("button");
-            formElement.addEventListener("botpoison-challenge-start", function () {
-              buttonElement.setAttribute("disabled", "disabled");
-            });
-            formElement.addEventListener("botpoison-challenge-success", function () {
-              buttonElement.removeAttribute("disabled");
-            });
-            formElement.addEventListener("botpoison-challenge-error", function () {
-              buttonElement.removeAttribute("disabled");
-            });
+            </footer>
+            <!-- Scripts -->
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+            <script>
+              function openTermo() {
+                  var pdfPath = './assets/termo.pdf';
+          
+                  window.open(pdfPath, '_blank');
+              }
           </script>
-          <script src="https://unpkg.com/@botpoison/browser" async></script>
-          <script src="vendor/jquery/jquery.min.js"></script>
-          <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-          <script src="assets/js/owl-carousel.js"></script>
-          <script src="assets/js/animation.js"></script>
-          <script src="assets/js/imagesloaded.js"></script>
-          <script src="assets/js/spicydevs.js"></script>
+          <script>
+            function openPolitica() {
+                var pdfPath = './assets/privac.pdf';
+        
+                window.open(pdfPath, '_blank');
+            }
+        </script>
+            <script>
+              var formElement = document.getElementById("form");
+              var buttonElement = document.getElementById("button");
+              formElement.addEventListener("botpoison-challenge-start", function () {
+                buttonElement.setAttribute("disabled", "disabled");
+              });
+              formElement.addEventListener("botpoison-challenge-success", function () {
+                buttonElement.removeAttribute("disabled");
+              });
+              formElement.addEventListener("botpoison-challenge-error", function () {
+                buttonElement.removeAttribute("disabled");
+              });
+            </script>
+            <script>
+              document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+            <script src="https://unpkg.com/@botpoison/browser" async></script>
+            <script src="vendor/jquery/jquery.min.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="assets/js/owl-carousel.js"></script>
+            <script src="assets/js/animation.js"></script>
+            <script src="assets/js/imagesloaded.js"></script>
+            <script src="assets/js/spicydevs.js"></script>
 
 </body>
 
